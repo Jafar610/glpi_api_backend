@@ -8,7 +8,9 @@ const app = express();
 
 // Enable CORS for local GLPI web interface
 app.use(cors({
-  origin: '*', // For local development; in production specify GLPI origin
+  origin: [
+    'https://helpdesk.wru.edu.et'
+  ],
   methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
